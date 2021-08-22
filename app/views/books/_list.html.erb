@@ -1,0 +1,20 @@
+<div><!---ここから左側のUser info部分--->
+    <h2>User info</h2>
+    <%= attachment_image_tag user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" %>
+    <table class="table">
+        <tbody>
+            <tr>
+               <th>name</th><td><%= user.name %></td>
+            </tr>
+            <tr>
+               <th>Introduction</th><td><%= user.introduction %></td>
+            </tr>
+        </tbody>
+     </table>
+     <!---ここから左側のUserの編集部分--->
+     <div class="btn btn-outline-secondary btn-block btn-outline-secondary ">
+
+           <%= link_to "", edit_user_path(user), class: "fas fa-user-cog btn-block text-secondary" %>
+
+     </div>
+</div>

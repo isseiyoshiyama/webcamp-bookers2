@@ -1,0 +1,11 @@
+<!---books/newからは投稿できない仕様になっているので、ここの記述は後ほど移行する必要がある---->
+<h2>New book</h2>
+<%= form_with model:@book, local:true do |f| %>
+  <p>Title</p>
+  <%= f.text_field :title %>
+  <p>Opinion</p>
+  <%= f.text_area :body %>
+  <br>
+  <%= f.submit 'Create Book' %>
+  
+<% end %>
